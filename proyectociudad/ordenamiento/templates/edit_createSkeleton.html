@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css"
+            href="{% static '/ordenamiento/css/main.css' %}">
+
+        <title>{{title}}</title>
+    </head>
+    <body style="background-color: #EEEEEE;">
+        <header>
+            <button >
+                <a style="color: black;" href="{% url 'index' %}">☚ Volver al inicio</a>
+            </button>
+        </header>
+        <section>
+            <article style="flex-direction: column;">
+                <h1>{{title}}</h1>
+
+                <form method="post">
+                    {% csrf_token %}
+                    {{ formulario.as_p}}
+                    <input type='submit' value='Guardar' />
+                </form>
+
+            </article>
+        </section>
+    </body>
+</html>
