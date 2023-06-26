@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+#Al incluir el módulo "ordenamiento.urls", puede definir las URL específicas relacionadas con la aplicación 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ordenamiento/', include("ordenamiento.urls")),

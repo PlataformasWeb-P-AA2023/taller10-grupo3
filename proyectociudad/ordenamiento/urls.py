@@ -6,7 +6,7 @@ from django.urls import path
 # se importa las vistas de la aplicación
 from . import views
 
-
+#definen las rutas y las funciones de vista correspondientes para diferentes páginas en su aplicación
 urlpatterns = [
     path('home', views.home, name='home'),
     path('parroquias', views.index, name='index'),

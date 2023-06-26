@@ -3,9 +3,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css"
+        href="{% static '/ordenamiento/css/index.css' %}"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css"
             href="{% static '/ordenamiento/css/main.css' %}">
+             
         <title>Inicio</title>
     </head>
 
@@ -29,6 +32,7 @@
                     <span class="header">
                         <h3>{{parroquia.nombre}}</h3>
                         <p>({{parroquia.tipo}})</p>
+                        
                     </span>
 
                     <div class="parroquia-info">
@@ -69,77 +73,3 @@
 
     </body>
 </html>
-
-<style scoped>
-    .parroquia{
-        align-self: flex-start;
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        background-color: #F9F9F9;
-        margin: 1vh;
-        padding: 3vh;
-        padding-top: 1vh;
-        border-radius: 50px;
-        box-shadow:  20px 20px 60px #bebebe,
-                     -20px -20px 60px #ffffff;
-    }
-
-
-    .parroquia .editar-parroquia-button{
-        width: 100%;
-        align-self: flex-end;
-        font-size: 0.9rem;
-        border: none;
-        background-color: #FFD369;
-        padding: 1.2vh;
-    }
-
-    .parroquia .crear-barrio-button{
-        width: 90%;
-        display: flex;
-        font-size: 0.9rem;
-        border: none;
-        background-color: #2F89FC;
-        color: #ffffff;
-        padding: 1.2vh;
-    }
-
-
-    .parroquia .header{
-        width: 100%;
-        display: flex; flex-direction: row; align-items: center; justify-content: center;
-        margin: 1vh;
-    }
-
-    .info-item{
-        background-color: #bebebe;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        border-radius: 2vh;
-        padding: 2vh;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .barrio{
-        margin: 1vh;
-
-    }
-    .barrio .barrio-content {
-        padding: 2vh;
-        background-color: #F9F9F9;
-      }
-      
-      details[open] .barrio-content {
-        padding: 2vh;
-        display: block;
-        border-radius: 1vh;
-      }
-
-    .new-parroquia{
-        display: flex;
-
-    }
-</style>
